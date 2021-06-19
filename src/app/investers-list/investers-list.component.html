@@ -1,0 +1,29 @@
+<br>
+<h4>Investor's List</h4><br>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Full Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Email-ID</th>
+      <th scope="col">Registration Date</th>
+      <th scope="col">Check Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let investor of totalInvestors">
+      <th scope="row">{{investor.fullname}}</th>
+      <td>{{investor.mobile}}</td>
+      <td>{{investor.email}}</td>
+      <td>{{investor.registrationDate}}/{{investor.registrationTime}}</td>
+      <td>
+        <i (click)="checkbalance((investor._id))" class="fa fa-eye" style="font-size:20px;color:blue;"></i>
+
+      </td>
+      <!-- <td *ngIf="this.balanceCheck">{{this.totalBalance}}</td> -->
+
+    </tr>
+
+  </tbody>
+</table>
